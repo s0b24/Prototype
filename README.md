@@ -22,3 +22,7 @@ Galvenās biznesa loģikas klases:
 Mijiedarbība ar datubāzi ir realizēta, izmantojot:
   -  DatabaseHelper
   -  DatabaseProvider
+
+Komponentu montāžas instrukcija sastāv no:
+  -  activity_assembly_instruction.xml
+  -  strings.xml (ietver komponentu savienošanas posmus)
