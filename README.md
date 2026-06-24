@@ -1,6 +1,6 @@
-# Android lietotnes prototips (bakalaura darbs)
+# Android lietotnes prototips datoru komponentu izvēles atbalstam (bakalaura darbs)
 
-## Autors: Vladislavs Boičenko
+### Autors: Vladislavs Boičenko
 
 Visi lietotnes galvenie elementi atrodas mapē "main".
 
