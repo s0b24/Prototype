@@ -25,7 +25,7 @@ Komponentu datubāze atrodas mapē "main/assets/components.db"main/assets/compon
 Mijiedarbība ar datubāzi ir realizēta, izmantojot:
   -  DatabaseHelper
   -  DatabaseProvider
-  -  
+ 
 Valodas dati tiek glabāti:
   -  strings.xml (lv)
   -  strings.xml (en)
