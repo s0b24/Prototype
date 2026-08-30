@@ -8,30 +8,24 @@ Pilns prototipa projekts atrodas failā "PCBuilderApp.zip".
 
 Komponentu datubāze atrodas mapē "main/assets/components.db"main/assets/components.db, tajā ir 104 datoru komponenti (pievienoti manuāli).
 
-| Funkcija | Komponents |
+### Galvenās aktivitātes un biznesa loģikas klases
+| Funckija | Komponents |
 |----------|------------|
 | Galvenā izvēlne (personalizācijas iestatījumi un piekļuve funkcijām) | MainActivity |
-| Valodu atbalsts | CountryManager |
-| Konfigurācijas izveide | ConfigurationActivity, ConfigurationAdapter |
-| Komponentu izvēle | SelectComponentActivity, SelectComponentAdapter | 
-| Komponentu filtrēšana | FilterComponentsActivity, FilterComponentsAdapter |
+| Konfigurācijas izveide | ConfigurationActivity |
+| Komponentu izvēle | SelectComponentActivity | 
+| Komponentu filtrēšana | FilterComponentsActivity |
 | Komponentu detalizētas specifikācijas parādīšana | ComponentDetailsActivity |
-
-Prototipa galvenās aktivitātes:
-  -  MainActivity
-  -  ConfigurationActivity
-  -  SelectComponentActivity, SelectComponentAdapter
-  -  SavedConfigurationActivity
-  -  ComponentDetailsActivity
-
-Galvenās biznesa loģikas klases:
-  -  CompatibilityCheck
-  -  CountryManager
+| Konfigurāciju saglabāšana | SavedConfigurationActivity |
+| Valstu atbalsts (valsts, valūta un valoda) | CountryManager |
+| Savietojamības pārbaude | CheckCompatibility |
+| Konfigurāciju analīze(CPU un GPU līdzsvara analīze un jaunināšanas ieteikumi) | AnalyzeConfigurationActivity, AnalyzeConfiguration |
+| Montāžas instrukcija | InstructionActivity, InstructioData |
 
 Mijiedarbība ar datubāzi ir realizēta, izmantojot:
   -  DatabaseHelper
   -  DatabaseProvider
-
-Komponentu montāžas instrukcija sastāv no:
-  -  activity_assembly_instruction.xml
-  -  strings.xml (ietver komponentu savienošanas posmus)
+  -  
+Valodas dati tiek glabāti:
+  -  strings.xml (lv)
+  -  strings.xml (en)
