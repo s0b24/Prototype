@@ -1,4 +1,4 @@
-# Android lietotnes prototips datoru komponentu izvēles atbalstam (bakalaura darbs)
+# Android lietotne datoru komponentu izvēles atbalstam (Bakalaura darbs)
 
 ### Autors: Vladislavs Boičenko
 
@@ -12,8 +12,10 @@ Komponentu datubāze atrodas mapē "main/assets/components.db"main/assets/compon
 |----------|------------|
 | Galvenā izvēlne (personalizācijas iestatījumi un piekļuve funkcijām) | MainActivity |
 | Valodu atbalsts | CountryManager |
-
-
+| Konfigurācijas izveide | ConfigurationActivity, ConfigurationAdapter |
+| Komponentu izvēle | SelectComponentActivity, SelectComponentAdapter | 
+| Komponentu filtrēšana | FilterComponentsActivity, FilterComponentsAdapter |
+| Komponentu detalizētas specifikācijas parādīšana | ComponentDetailsActivity |
 
 Prototipa galvenās aktivitātes:
   -  MainActivity
