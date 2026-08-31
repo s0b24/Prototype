@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/background"
+    tools:context=".AnalyzeConfigurationActivity">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        app:srcCompat="@drawable/back"
+        app:tint="@color/view_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/cpuGpuAnalyzeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:text="@string/cpu_gpu_balance"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backBtn" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cpuGpuAnalyze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/card"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/cpuGpuAnalyzeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#3A3838"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/cpuScoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/cpu_score"
+                android:textSize="16sp"
+                android:textColor="@color/text_secondary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/cpuScoreValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:textColor="#7DE683"
+                app:layout_constraintTop_toBottomOf="@id/cpuScoreText"
+                app:layout_constraintStart_toStartOf="@id/cpuScoreText" />
+
+            <TextView
+                android:id="@+id/bottleneckText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/performance_limitation"
+                android:textSize="16sp"
+                android:textColor="@color/text_secondary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/bottleneckValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:textColor="#6BADE9"
+                app:layout_constraintTop_toBottomOf="@id/bottleneckText"
+                app:layout_constraintStart_toStartOf="@id/bottleneckText" />
+
+            <TextView
+                android:id="@+id/gpuScoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/cpu_score"
+                android:textSize="16sp"
+                android:textColor="@color/text_secondary"
+                app:layout_constraintTop_toBottomOf="@id/cpuScoreValue"
+                app:layout_constraintStart_toStartOf="@id/cpuScoreValue" />
+
+            <TextView
+                android:id="@+id/gpuScoreValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:textColor="#7DE683"
+                app:layout_constraintTop_toBottomOf="@id/gpuScoreText"
+                app:layout_constraintStart_toStartOf="@id/gpuScoreText" />
+
+            <TextView
+                android:id="@+id/balanceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/balance"
+                android:textSize="16sp"
+                android:textColor="@color/text_secondary"
+                app:layout_constraintTop_toBottomOf="@id/bottleneckValue"
+                app:layout_constraintStart_toStartOf="@id/bottleneckValue" />
+
+            <TextView
+                android:id="@+id/balanceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                app:layout_constraintTop_toBottomOf="@id/balanceText"
+                app:layout_constraintStart_toStartOf="@id/balanceText" />
+
+            <TextView
+                android:id="@+id/balanceDescriptionText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="#DCDCDC"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/gpuScoreValue"
+                app:layout_constraintStart_toStartOf="@id/gpuScoreValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/upgradeComponentsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:text="@string/upgrade_recommendations"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cpuGpuAnalyze" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/upgradeComponentsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintTop_toBottomOf="@id/upgradeComponentsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/cpu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="CPU:"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            app:layout_constraintTop_toTopOf="@id/cpuBudgetValue"
+            app:layout_constraintBottom_toBottomOf="@id/cpuBudgetValue"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/cpuBudgetValue"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:ems="4"
+            android:inputType="numberDecimal"
+            android:hint="0.00"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cpu" />
+
+        <TextView
+            android:id="@+id/gpu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="GPU:"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            app:layout_constraintTop_toTopOf="@id/gpuBudgetValue"
+            app:layout_constraintBottom_toBottomOf="@id/gpuBudgetValue"
+            app:layout_constraintStart_toEndOf="@id/cpuBudgetValue" />
+
+        <EditText
+            android:id="@+id/gpuBudgetValue"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:ems="4"
+            android:inputType="numberDecimal"
+            android:hint="0.00"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/gpu" />
+
+        <TextView
+            android:id="@+id/ram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="RAM:"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            app:layout_constraintTop_toTopOf="@id/ramBudgetValue"
+            app:layout_constraintBottom_toBottomOf="@id/ramBudgetValue"
+            app:layout_constraintStart_toEndOf="@id/gpuBudgetValue" />
+
+        <EditText
+            android:id="@+id/ramBudgetValue"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:ems="4"
+            android:inputType="numberDecimal"
+            android:hint="0.00"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ram" />
+
+        <Button
+            android:id="@+id/findRecommendationsBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/simple_button"
+            android:padding="12dp"
+            android:text="@string/show_upgrade_recommendations"
+            android:textColor="@color/text_primary"
+            app:cornerRadius="10dp"
+            app:layout_constraintTop_toBottomOf="@id/cpu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecommendations"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upgradeComponentsLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
