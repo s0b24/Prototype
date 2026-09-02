@@ -6,7 +6,7 @@ Visi lietotnes galvenie elementi atrodas mapē "main".
 
 Pilns prototipa projekts atrodas failā "PCBuilderApp.zip".
 
-Komponentu datubāze atrodas mapē "main/assets/components.db", tajā ir 104 datoru komponenti (pievienoti manuāli).
+Komponentu datubāze atrodas mapē "main/assets/components.db", tajā ir 107 datoru komponenti (pievienoti manuāli).
 
 ### Galvenās aktivitātes un biznesa loģikas klases
 | Funckija | Komponents |
